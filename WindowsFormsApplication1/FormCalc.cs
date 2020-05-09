@@ -12,319 +12,163 @@ namespace WindowsFormsApplication1
 {
     public partial class FormCalc : Form
     {
-        double a = 0, b = 0;
-        bool changed = false;
-        int op;
+        private double _firstValue = 0, _secondValue = 0;   //Values of calculation
+        private bool _operationChosen = false;   //button of operation clicked (if true: button of operation was clicked)
+        private bool _containsDot = false; //number at the screen contains dot
+        private int _operationNumber;   //operations by TabIndex: 12 - "+", 13 - "-", 14 - "*", 15 - "/"
+        private const int OperationSum = 12, OperationSub = 13, OperationMul = 14, OperationDiv = 15;
+        private bool _isInfinity = false;   //screen displays "Infinity" (ban of using keyboard until reset)
+        
         public FormCalc()
         {
             InitializeComponent();
             this.KeyPreview = true;
-            this.KeyPress += new KeyPressEventHandler(Form1_KeyPress);
+            this.KeyPress += new KeyPressEventHandler(FormCalc_KeyPress);
         }
 
-        private double setNum()
+        private void button_Click(object sender, EventArgs e)   //numbers & operations buttons click handler (use for buttons only)
         {
-            if (label1.Text.Length < 1) {
-                label1.Text = "0";
-            }
-            double t = 0;
-            int dot = 0;
-            for (int i = 0; i < label1.Text.Length; i++)
+            if (sender.GetType() == typeof(Button))
             {
-                if (label1.Text[i] == '.')
+                labelError.Text = "";
+                if ((((Button) sender).TabIndex >= 1) && (((Button) sender).TabIndex <= 10))   //Handling numbers click
                 {
-                    dot = i;
-                }
-            }
-            if (dot == 0)
-            {
-                for (int i = 0; i < label1.Text.Length; i++)
+                    HandleNumberClick(((Button) sender).TabIndex - 1);
+                } else   //Handling operations click
                 {
-                    t = t * 10 + (int)label1.Text[i] - 48;
+                    HandleOperationClick(((Button) sender).TabIndex);
                 }
             }
             else
             {
-                int i = 0;
-                while (i < dot)
-                {
-                    t = t * 10 + (int)label1.Text[i] - 48;
-                    i++;
-                }
-                i++;
-                double count = label1.Text.Length - i;
-                double temp = 0;
-                for (int j = i; j < label1.Text.Length; j++)
-                {
-                    temp = temp * 10 + (int)label1.Text[j] - 48;
-                }
-                temp = temp / Math.Pow(10, count);
-                t += temp;
+                labelError.Text = "Impossible method call (method: " + System.Reflection.MethodBase.GetCurrentMethod().Name;
             }
-            return t;
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        
+        private void buttonSolve_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            label1.Text = label1.Text + "4";
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            label1.Text = label1.Text + "1";
-            
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-            changed = false;
-            label1.Text = "";
-            a = 0;
-            b = 0;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        void Form1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+            if (labelValue.Text.Length == 0)
             {
-                label1.Text = label1.Text + (char)e.KeyChar;
+                labelError.Text = "Enter value";
+            }
+            else if (_operationChosen)
+            {
+                _secondValue = double.Parse(labelValue.Text);
+                _firstValue = Calculate(_firstValue, _secondValue);
+                if (!labelValue.Text.Equals("Infinity"))
+                {
+                    labelValue.Text = _firstValue.ToString();
+                }
+                _operationChosen = false;
+                _operationNumber = 0;
+                _containsDot = labelValue.Text.Contains(".");
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void HandleNumberClick(int number)
         {
-            label1.Text = label1.Text + "2";
+            labelValue.Text += number.ToString();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void HandleOperationClick(int operationNumber)
         {
-            label1.Text = label1.Text + "3";
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            label1.Text = label1.Text + "5";
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            label1.Text = label1.Text + "6";
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            label1.Text = label1.Text + "7";
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            label1.Text = label1.Text + "8";
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            label1.Text = label1.Text + "9";
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            label1.Text = label1.Text + "0";
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            label1.Text = label1.Text + ".";
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            if (changed)
+            _containsDot = false;
+            if (labelValue.Text.Length == 0)
             {
-                switch (op)
-                {
-                    case 1:
-                        if (double.Parse(label1.Text) == 0)
-                        {
-                            label1.Text = "Infinity";
-                        }
-                        else
-                        {
-                            a = a / double.Parse(label1.Text);
-                        }
-                        break;
-                    case 2:
-                        a = a * double.Parse(label1.Text);
-                        break;
-                    case 3:
-                        a = a + double.Parse(label1.Text);
-                        break;
-                    case 4:
-                        a = a - double.Parse(label1.Text);
-                        break;
-                }
+                labelError.Text = "Enter value";   //TODO: remove after adding labelLastCalculation
             }
             else
             {
-                changed = true;
-                a = double.Parse(label1.Text);
-            }
-            op = 3;
-            label1.Text = "";
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            if (changed)
-            {
-                switch (op)
+                if (_operationChosen)
                 {
-                    case 1:
-                        if (double.Parse(label1.Text) == 0)
-                        {
-                            label1.Text = "Infinity";
-                        }
-                        else
-                        {
-                            a = a / double.Parse(label1.Text);
-                        }
-                        break;
-                    case 2:
-                        a = a * double.Parse(label1.Text);
-                        break;
-                    case 3:
-                        a = a + double.Parse(label1.Text);
-                        break;
-                    case 4:
-                        a = a - double.Parse(label1.Text);
-                        break;
+                    _firstValue = Calculate(_firstValue, double.Parse(labelValue.Text));
+                }
+                else
+                {
+                    _operationChosen = true;
+                    _firstValue = double.Parse(labelValue.Text);
+                }
+                if (!labelValue.Text.Equals("Infinity"))
+                {
+                    labelValue.Text = "";
                 }
             }
-            else
-            {
-                changed = true;
-                a = double.Parse(label1.Text);
-            }
-            label1.Text = "";
-            op = 1;
+            _operationNumber = operationNumber;
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private double Calculate(double value1, double value2)
         {
-            if (changed)
+            switch (_operationNumber)
             {
-                switch (op)
-                {
-                    case 1:
-                        if (double.Parse(label1.Text) == 0)
-                        {
-                            label1.Text = "Infinity";
-                        }
-                        else
-                        {
-                            a = a / double.Parse(label1.Text);
-                        }
-                        break;
-                    case 2:
-                        a = a * double.Parse(label1.Text);
-                        break;
-                    case 3:
-                        a = a + double.Parse(label1.Text);
-                        break;
-                    case 4:
-                        a = a - double.Parse(label1.Text);
-                        break;
-                }
-            }
-            else
-            {
-                changed = true;
-                a = double.Parse(label1.Text);
-            }
-            label1.Text = "";
-            op = 2;
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            if (changed)
-            {
-                switch (op)
-                {
-                    case 1:
-                        if (double.Parse(label1.Text) == 0)
-                        {
-                            label1.Text = "Infinity";
-                        }
-                        else
-                        {
-                            a = a / double.Parse(label1.Text);
-                        }
-                        break;
-                    case 2:
-                        a = a * double.Parse(label1.Text);
-                        break;
-                    case 3:
-                        a = a + double.Parse(label1.Text);
-                        break;
-                    case 4:
-                        a = a - double.Parse(label1.Text);
-                        break;
-                }
-            }
-            else
-            {
-                changed = true;
-                a = double.Parse(label1.Text);
-            }
-            label1.Text = "";
-            op = 4;
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-            b = setNum();
-            switch (op)
-            {
-                case 1:
-                    if (b == 0)
+                case OperationDiv:
+                    if (value2 == 0)
                     {
-                        label1.Text = "Infinity";
+                        labelValue.Text = "Infinity";
+                        foreach (Control c in this.Controls)
+                        {
+                            if (c.TabIndex < 16)
+                            {
+                                c.Enabled = false;
+                            }
+                        }
+
+                        _isInfinity = true;
                     }
                     else
                     {
-                        label1.Text = (a / b).ToString();
+                        value1 /= value2;
                     }
-                break;
-                case 2:
-                    label1.Text = (a * b).ToString();
-                break;
-                case 3:
-                    label1.Text = (a + b).ToString();
-                break;
-                case 4:
-                    label1.Text = (a - b).ToString();
-                break;
+
+                    break;
+                case OperationMul:
+                    value1 *= value2;
+                    break;
+                case OperationSum:
+                    value1 += value2;
+                    break;
+                case OperationSub:
+                    value1 -= value2;
+                    break;
             }
+
+            return value1;
+        }
+
+        private void buttonDot_Click(object sender, EventArgs e)
+        {
+            if ((labelValue.Text.Length > 0) && (!_containsDot))
+            {
+                labelValue.Text += ",";
+                _containsDot = true;
+            }
+        }
+        
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            labelError.Text = "";
+            _operationChosen = false;
+            _containsDot = false;
+            _isInfinity = false;
+            labelValue.Text = "";
+            _firstValue = 0;
+            _secondValue = 0;
+            foreach (Control c in this.Controls)
+            {
+                c.Enabled = true;
+            }
+        }
+        
+        void FormCalc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!_isInfinity && (e.KeyChar >= 48 && e.KeyChar <= 57))   //48-57 - codes of chars '0'-'9'
+            {
+                labelValue.Text += (char)e.KeyChar;
+            }
+        }
+
+        private void FormCalc_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
