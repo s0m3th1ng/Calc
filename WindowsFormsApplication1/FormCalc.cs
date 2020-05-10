@@ -106,7 +106,7 @@ namespace WindowsFormsApplication1
                         labelValue.Text = "Infinity";
                         foreach (Control c in this.Controls)
                         {
-                            if (c.TabIndex < 16)
+                            if (c.TabIndex < buttonReset.TabIndex)
                             {
                                 c.Enabled = false;
                             }
