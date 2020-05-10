@@ -290,7 +290,7 @@
             this.buttonReset.BackColor = System.Drawing.Color.Tomato;
             this.buttonReset.FlatAppearance.BorderSize = 0;
             this.buttonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.buttonReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.buttonReset.Location = new System.Drawing.Point(297, 155);
             this.buttonReset.Margin = new System.Windows.Forms.Padding(4);
             this.buttonReset.Name = "buttonReset";
@@ -326,9 +326,8 @@
             this.labelError.Location = new System.Drawing.Point(0, 6);
             this.labelError.Margin = new System.Windows.Forms.Padding(0);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(62, 44);
+            this.labelError.Size = new System.Drawing.Size(0, 44);
             this.labelError.TabIndex = 18;
-            this.labelError.Text = "17";
             // 
             // labelValue
             // 
@@ -336,12 +335,11 @@
             this.labelValue.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.labelValue.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelValue.Location = new System.Drawing.Point(353, 6);
+            this.labelValue.Location = new System.Drawing.Point(415, 6);
             this.labelValue.Margin = new System.Windows.Forms.Padding(0);
             this.labelValue.Name = "labelValue";
-            this.labelValue.Size = new System.Drawing.Size(62, 44);
+            this.labelValue.Size = new System.Drawing.Size(0, 44);
             this.labelValue.TabIndex = 21;
-            this.labelValue.Text = "17";
             // 
             // buttonSqr
             // 
@@ -355,6 +353,7 @@
             this.buttonSqr.TabIndex = 16;
             this.buttonSqr.Text = "x²";
             this.buttonSqr.UseVisualStyleBackColor = false;
+            this.buttonSqr.Click += new System.EventHandler(this.buttonSqr_Click);
             // 
             // buttonSqrt
             // 
@@ -368,6 +367,7 @@
             this.buttonSqrt.TabIndex = 17;
             this.buttonSqrt.Text = "√x";
             this.buttonSqrt.UseVisualStyleBackColor = false;
+            this.buttonSqrt.Click += new System.EventHandler(this.buttonSqrt_Click);
             // 
             // buttonPower
             // 
@@ -381,6 +381,7 @@
             this.buttonPower.TabIndex = 18;
             this.buttonPower.Text = "x^ʸ";
             this.buttonPower.UseVisualStyleBackColor = false;
+            this.buttonPower.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonErase
             // 
@@ -394,6 +395,7 @@
             this.buttonErase.TabIndex = 19;
             this.buttonErase.Text = "<";
             this.buttonErase.UseVisualStyleBackColor = false;
+            this.buttonErase.Click += new System.EventHandler(this.buttonErase_Click);
             // 
             // labelHistoryValue
             // 
@@ -401,23 +403,21 @@
             this.labelHistoryValue.BackColor = System.Drawing.SystemColors.Control;
             this.labelHistoryValue.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelHistoryValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.labelHistoryValue.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelHistoryValue.Location = new System.Drawing.Point(336, 10);
+            this.labelHistoryValue.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelHistoryValue.Location = new System.Drawing.Point(415, 10);
             this.labelHistoryValue.Name = "labelHistoryValue";
-            this.labelHistoryValue.Size = new System.Drawing.Size(79, 32);
+            this.labelHistoryValue.Size = new System.Drawing.Size(0, 32);
             this.labelHistoryValue.TabIndex = 22;
-            this.labelHistoryValue.Text = "1234";
             // 
             // labelOperation
             // 
             this.labelOperation.AutoSize = true;
             this.labelOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
-            this.labelOperation.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelOperation.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelOperation.Location = new System.Drawing.Point(387, 65);
             this.labelOperation.Name = "labelOperation";
-            this.labelOperation.Size = new System.Drawing.Size(21, 24);
+            this.labelOperation.Size = new System.Drawing.Size(0, 24);
             this.labelOperation.TabIndex = 23;
-            this.labelOperation.Text = "+";
             // 
             // panel1
             // 
