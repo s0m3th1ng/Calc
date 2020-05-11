@@ -58,9 +58,6 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (180)))), ((int) (((byte) (240)))), ((int) (((byte) (250)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -73,9 +70,6 @@
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button_Click);
-            // 
-            // button6
-            // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (180)))), ((int) (((byte) (240)))), ((int) (((byte) (250)))));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -88,9 +82,6 @@
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button_Click);
-            // 
-            // button5
-            // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (180)))), ((int) (((byte) (240)))), ((int) (((byte) (250)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -103,9 +94,6 @@
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button_Click);
-            // 
-            // button4
-            // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (180)))), ((int) (((byte) (240)))), ((int) (((byte) (250)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -118,9 +106,6 @@
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button_Click);
-            // 
-            // button3
-            // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (180)))), ((int) (((byte) (240)))), ((int) (((byte) (250)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -133,9 +118,6 @@
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button_Click);
-            // 
-            // button2
-            // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (180)))), ((int) (((byte) (240)))), ((int) (((byte) (250)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -148,9 +130,6 @@
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button_Click);
-            // 
-            // button9
-            // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (180)))), ((int) (((byte) (240)))), ((int) (((byte) (250)))));
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -163,9 +142,6 @@
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button_Click);
-            // 
-            // button8
-            // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (180)))), ((int) (((byte) (240)))), ((int) (((byte) (250)))));
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,9 +154,6 @@
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button_Click);
-            // 
-            // button7
-            // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (180)))), ((int) (((byte) (240)))), ((int) (((byte) (250)))));
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -194,9 +167,6 @@
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button_Click);
-            // 
-            // button0
-            // 
             this.button0.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (180)))), ((int) (((byte) (240)))), ((int) (((byte) (250)))));
             this.button0.FlatAppearance.BorderSize = 0;
             this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -209,9 +179,6 @@
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = false;
             this.button0.Click += new System.EventHandler(this.button_Click);
-            // 
-            // buttonSum
-            // 
             this.buttonSum.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (76)))), ((int) (((byte) (200)))), ((int) (((byte) (230)))));
             this.buttonSum.FlatAppearance.BorderSize = 0;
             this.buttonSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -224,9 +191,6 @@
             this.buttonSum.Text = "+";
             this.buttonSum.UseVisualStyleBackColor = false;
             this.buttonSum.Click += new System.EventHandler(this.button_Click);
-            // 
-            // buttonMul
-            // 
             this.buttonMul.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (76)))), ((int) (((byte) (200)))), ((int) (((byte) (230)))));
             this.buttonMul.FlatAppearance.BorderSize = 0;
             this.buttonMul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -239,9 +203,6 @@
             this.buttonMul.Text = "×";
             this.buttonMul.UseVisualStyleBackColor = false;
             this.buttonMul.Click += new System.EventHandler(this.button_Click);
-            // 
-            // buttonDiv
-            // 
             this.buttonDiv.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (76)))), ((int) (((byte) (200)))), ((int) (((byte) (230)))));
             this.buttonDiv.FlatAppearance.BorderSize = 0;
             this.buttonDiv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -254,9 +215,6 @@
             this.buttonDiv.Text = "÷";
             this.buttonDiv.UseVisualStyleBackColor = false;
             this.buttonDiv.Click += new System.EventHandler(this.button_Click);
-            // 
-            // buttonSub
-            // 
             this.buttonSub.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (76)))), ((int) (((byte) (200)))), ((int) (((byte) (230)))));
             this.buttonSub.FlatAppearance.BorderSize = 0;
             this.buttonSub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -269,9 +227,6 @@
             this.buttonSub.Text = "-";
             this.buttonSub.UseVisualStyleBackColor = false;
             this.buttonSub.Click += new System.EventHandler(this.button_Click);
-            // 
-            // buttonDot
-            // 
             this.buttonDot.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (180)))), ((int) (((byte) (240)))), ((int) (((byte) (250)))));
             this.buttonDot.FlatAppearance.BorderSize = 0;
             this.buttonDot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -284,9 +239,6 @@
             this.buttonDot.Text = ",";
             this.buttonDot.UseVisualStyleBackColor = false;
             this.buttonDot.Click += new System.EventHandler(this.buttonDot_Click);
-            // 
-            // buttonReset
-            // 
             this.buttonReset.BackColor = System.Drawing.Color.Tomato;
             this.buttonReset.FlatAppearance.BorderSize = 0;
             this.buttonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -300,9 +252,6 @@
             this.buttonReset.UseMnemonic = false;
             this.buttonReset.UseVisualStyleBackColor = false;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
-            // 
-            // buttonSolve
-            // 
             this.buttonSolve.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (150)))), ((int) (((byte) (191)))));
             this.buttonSolve.FlatAppearance.BorderSize = 0;
             this.buttonSolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -316,9 +265,6 @@
             this.buttonSolve.Text = "=";
             this.buttonSolve.UseVisualStyleBackColor = false;
             this.buttonSolve.Click += new System.EventHandler(this.buttonSolve_Click);
-            // 
-            // labelError
-            // 
             this.labelError.AutoSize = true;
             this.labelError.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelError.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
@@ -328,9 +274,6 @@
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(0, 44);
             this.labelError.TabIndex = 18;
-            // 
-            // labelValue
-            // 
             this.labelValue.AutoSize = true;
             this.labelValue.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
@@ -340,9 +283,6 @@
             this.labelValue.Name = "labelValue";
             this.labelValue.Size = new System.Drawing.Size(0, 44);
             this.labelValue.TabIndex = 21;
-            // 
-            // buttonSqr
-            // 
             this.buttonSqr.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (76)))), ((int) (((byte) (200)))), ((int) (((byte) (230)))));
             this.buttonSqr.FlatAppearance.BorderSize = 0;
             this.buttonSqr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -354,9 +294,6 @@
             this.buttonSqr.Text = "x²";
             this.buttonSqr.UseVisualStyleBackColor = false;
             this.buttonSqr.Click += new System.EventHandler(this.buttonSqr_Click);
-            // 
-            // buttonSqrt
-            // 
             this.buttonSqrt.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (76)))), ((int) (((byte) (200)))), ((int) (((byte) (230)))));
             this.buttonSqrt.FlatAppearance.BorderSize = 0;
             this.buttonSqrt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -368,9 +305,6 @@
             this.buttonSqrt.Text = "√x";
             this.buttonSqrt.UseVisualStyleBackColor = false;
             this.buttonSqrt.Click += new System.EventHandler(this.buttonSqrt_Click);
-            // 
-            // buttonPower
-            // 
             this.buttonPower.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (76)))), ((int) (((byte) (200)))), ((int) (((byte) (230)))));
             this.buttonPower.FlatAppearance.BorderSize = 0;
             this.buttonPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -382,23 +316,17 @@
             this.buttonPower.Text = "x^ʸ";
             this.buttonPower.UseVisualStyleBackColor = false;
             this.buttonPower.Click += new System.EventHandler(this.button_Click);
-            // 
-            // buttonErase
-            // 
             this.buttonErase.BackColor = System.Drawing.Color.LightSalmon;
             this.buttonErase.FlatAppearance.BorderSize = 0;
             this.buttonErase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonErase.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
+            this.buttonErase.Image = global::WindowsFormsApplication1.Properties.Resources.erase;
             this.buttonErase.Location = new System.Drawing.Point(352, 155);
             this.buttonErase.Name = "buttonErase";
             this.buttonErase.Size = new System.Drawing.Size(65, 59);
             this.buttonErase.TabIndex = 19;
-            this.buttonErase.Text = "<";
-            this.buttonErase.UseVisualStyleBackColor = false;
+            this.buttonErase.UseVisualStyleBackColor = true;
             this.buttonErase.Click += new System.EventHandler(this.buttonErase_Click);
-            // 
-            // labelHistoryValue
-            // 
             this.labelHistoryValue.AutoSize = true;
             this.labelHistoryValue.BackColor = System.Drawing.SystemColors.Control;
             this.labelHistoryValue.Dock = System.Windows.Forms.DockStyle.Right;
@@ -408,9 +336,6 @@
             this.labelHistoryValue.Name = "labelHistoryValue";
             this.labelHistoryValue.Size = new System.Drawing.Size(0, 32);
             this.labelHistoryValue.TabIndex = 22;
-            // 
-            // labelOperation
-            // 
             this.labelOperation.AutoSize = true;
             this.labelOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (204)));
             this.labelOperation.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -418,9 +343,6 @@
             this.labelOperation.Name = "labelOperation";
             this.labelOperation.Size = new System.Drawing.Size(0, 24);
             this.labelOperation.TabIndex = 23;
-            // 
-            // panel1
-            // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.labelHistoryValue);
             this.panel1.Location = new System.Drawing.Point(2, 4);
@@ -428,9 +350,6 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.panel1.Size = new System.Drawing.Size(415, 58);
             this.panel1.TabIndex = 24;
-            // 
-            // panel2
-            // 
             this.panel2.Controls.Add(this.labelValue);
             this.panel2.Controls.Add(this.labelError);
             this.panel2.Location = new System.Drawing.Point(2, 97);
@@ -438,9 +357,6 @@
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
             this.panel2.Size = new System.Drawing.Size(415, 51);
             this.panel2.TabIndex = 25;
-            // 
-            // FormCalc
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -476,6 +392,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCalc";
             this.ShowIcon = false;
+            this.Text = "Калькулятор";
             this.Load += new System.EventHandler(this.FormCalc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
